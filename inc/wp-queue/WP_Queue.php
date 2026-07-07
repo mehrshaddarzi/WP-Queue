@@ -335,14 +335,3 @@ if (!class_exists('\WP_Application\CustomTable\WP_Queue')) {
 
 
 new WP_Queue();
-
-add_action('init', function(){
-
-    if(isset($_GET['ppp'])) {
-
-        $item = WP_Queue::get(4);
-        WP_Queue::run($item);
-        exit;
-    }
-
-});
