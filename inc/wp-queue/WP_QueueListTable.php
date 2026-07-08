@@ -262,9 +262,9 @@ class WP_QueueListTable extends \WP_List_Table
                     return $unknown;
                 }
 
-                $text = parsidate("Y-m-d", strtotime($item[$column_name]), "eng");
+                $text = wp_date("Y-m-d", strtotime($item[$column_name]));
                 $text .= '<br />';
-                $text .= parsidate("H:i:s", strtotime($item[$column_name]), "eng");
+                $text .= wp_date("H:i:s", strtotime($item[$column_name]));
                 $text .= '<br />';
                 $text .= '<span style="color: #b1b1b1;">' . human_time_diff(strtotime($item[$column_name]), current_time('timestamp')) . ' پیش </span>';
                 return $text;
@@ -275,9 +275,9 @@ class WP_QueueListTable extends \WP_List_Table
                     return $unknown;
                 }
 
-                $text = parsidate("Y-m-d", strtotime($item[$column_name]), "eng");
+                $text = wp_date("Y-m-d", strtotime($item[$column_name]));
                 $text .= '<br />';
-                $text .= parsidate("H:i:s", strtotime($item[$column_name]), "eng");
+                $text .= wp_date("H:i:s", strtotime($item[$column_name]));
                 return $text;
                 break;
 
