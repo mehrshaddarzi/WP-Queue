@@ -148,7 +148,7 @@ class WP_QueueAdminPage extends Page
     {
         if (static::is_page() and empty($_GET['screen'])) {
 
-            include \WP_Queue::$plugin_path . '/inc/wp-queue/view/search-box.php';
+            include \WP_Queue::$plugin_path . '/inc/wp-queue/views/search-box.php';
             echo '<style>th#args {width: 320px;} .widefat td, .widefat th { font-size: 11px;}</style>';
         }
     }
